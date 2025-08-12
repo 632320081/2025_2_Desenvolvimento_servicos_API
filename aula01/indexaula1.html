@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtNumero1" placeholder="Digite um número">
+    <input type="number" id="txtNumero2" placeholder="Digite outro número">
+    <button onclick="somar()">Somar</button>
+    <p id="pResultado"></p>
+
+    <script>
+        function somar() {
+            var num1 = parseFloat(document.getElementById("txtNumero1").value);
+            var num2 = parseFloat(document.getElementById("txtNumero2").value);
+            var resultado = num1 + num2;
+            var pResultado = document.getElementById("pResultado");
+            pResultado.textContent = "Resultado: " + resultado;
+            pResultado.style.color = resultado < 0 ? "red" : "blue";
+        }
+    </script>
+</body>
+</html>
